@@ -2,6 +2,7 @@
 #define ARRAY_LIST_H
 #include <stdio.h>
 #include "Point.h"
+#include "NameCard.h"
 #define TRUE 1
 #define FALSE 0
 
@@ -11,7 +12,9 @@
 				   // easy to notify class structure !! 
 
 
-typedef Point* LData;
+// typedef Point* LData;
+
+typedef NameCard* LData; 
 typedef struct __ArrayList
 {
 	LData arr[LIST_LEN];
