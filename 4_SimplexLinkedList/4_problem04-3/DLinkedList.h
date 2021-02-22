@@ -1,10 +1,12 @@
 #ifndef __D_LINKED_LIST_H__
 #define __D_LINKED_LIST_H__
 
+#include "Point.h"
 #define TRUE 1
 #define FALSE 0
 
-typedef int LData;
+//typedef int LData;
+typedef Point* LData;
 
 typedef struct _node
 {
@@ -26,8 +28,8 @@ typedef LinkedList List;
 void ListInit(List* plist);
 void LInsert(List* plist,LData data);
 
-// void FInsert(List* plist, LData data);
-// void SInsert(List* plist, LData data);
+void FInsert(List* plist, LData data);
+void SInsert(List* plist, LData data);
 
 int LFirst(List* plist, LData* pdata);
 int LNext(List* plist, LData* pdata);
@@ -36,6 +38,9 @@ LData LRemove(List* plist);
 int LCount(List* plist);
 
 void SetSortRule(List* plist,int (*comp)(LData d1,LData d2));
-
+//comp function return 0 if d1 <d2 
+// otherwise, return 1(this function define in main code)
+// to more tenderness, comp(sorting) priority function locate at main code 
+// then, user can give priority own code
 
 #endif
