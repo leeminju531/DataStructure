@@ -1,0 +1,1 @@
+make Stack by using CLinkedList.c written last chapter
