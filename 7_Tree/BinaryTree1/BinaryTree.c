@@ -28,10 +28,16 @@ BTreeNode* GetRightSubTree(BTreeNode* bt)
 }
 void MakeLeftSubTree(BTreeNode* main,BTreeNode* sub)
 {
+	/*
+		travelsal delete left tree
+	*/
 	main->left = sub;
 }
 
 void MakeRightSubTree(BTreeNode* main,BTreeNode* sub)
 {
+	/*
+		travelsal delete right tree
+	*/
 	main->right = sub;
 }
