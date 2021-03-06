@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "InfixToPostfix.h"
+#include "BinaryTree.h"
+#include "ExpressionTree.h"
 
 #define INPUT_LEN 100
 
@@ -10,7 +12,12 @@ int main(void)
 	scanf("%s",input);
 
 	ConvToRPNExp(input); // chang infix input-> postfix
-	printf(" postfix Notation : %s",input);
+	BTreeNode* eTree = MakeExpTree(input);
+
+	ShowPrefixTypeExp(eTree);printf("\n");
+	ShowInfixTypeExp(eTree);printf("\n");
+	ShowPostfixTypeExp(eTree);printf("\n");
+
 
 	return 0;
 }
