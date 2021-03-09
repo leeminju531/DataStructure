@@ -13,12 +13,12 @@ typedef struct _heapElem
 {
 	Priority pr;
 	HData data;
-} HeadElem;
+} HeapElem;
 
 typedef struct _heap
 {
 	int numOfData;
-	HeadElem heapArr[HEAP_LEN];
+	HeapElem heapArr[HEAP_LEN];
 } Heap;
 
 void HeapInit(Heap* ph);
