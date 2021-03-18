@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "BinarySearchTree.h"
 
 int main(void)
@@ -16,29 +17,38 @@ int main(void)
 	BSTInsert(&bstRoot,3);
 	BSTInsert(&bstRoot,5);
 
-	sNode = BSTSearch(bstRoot,1);
-	if(sNode == NULL)
-		printf("searching fail\n");
-	else
-		printf("key value : %d\n",BSTGetNodeData(sNode));
+	BSTShowAll(bstRoot);printf("\n");
+	sNode = BSTRemove(&bstRoot,3);
+	free(sNode);
 
-	sNode = BSTSearch(bstRoot,4);
-	if(sNode == NULL)
-		printf("searching fail\n");
-	else
-		printf("key value : %d\n",BSTGetNodeData(sNode));	
+	BSTShowAll(bstRoot);printf("\n");
+	sNode = BSTRemove(&bstRoot,1);
+	free(sNode);
 
-	sNode = BSTSearch(bstRoot,6);
-	if(sNode == NULL)
-		printf("searching fail\n");
-	else
-		printf("key value : %d\n",BSTGetNodeData(sNode));
+	BSTShowAll(bstRoot);printf("\n");
+	// sNode = BSTSearch(bstRoot,1);
+	// if(sNode == NULL)
+	// 	printf("searching fail\n");
+	// else
+	// 	printf("key value : %d\n",BSTGetNodeData(sNode));
 
-	sNode = BSTSearch(bstRoot,7);
-	if(sNode == NULL)
-		printf("searching fail\n");
-	else
-		printf("key value : %d\n",BSTGetNodeData(sNode));
+	// sNode = BSTSearch(bstRoot,4);
+	// if(sNode == NULL)
+	// 	printf("searching fail\n");
+	// else
+	// 	printf("key value : %d\n",BSTGetNodeData(sNode));	
+
+	// sNode = BSTSearch(bstRoot,6);
+	// if(sNode == NULL)
+	// 	printf("searching fail\n");
+	// else
+	// 	printf("key value : %d\n",BSTGetNodeData(sNode));
+
+	// sNode = BSTSearch(bstRoot,7);
+	// if(sNode == NULL)
+	// 	printf("searching fail\n");
+	// else
+	// 	printf("key value : %d\n",BSTGetNodeData(sNode));
 
 	return 0;
 }
