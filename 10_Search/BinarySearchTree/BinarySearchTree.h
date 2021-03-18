@@ -1,7 +1,7 @@
 #ifndef __BINARY_SEARCH_TREE_H__
 #define __BINARY_SEARCH_TREE_H__
+#include "BinaryTree3.h"
 
-#include "BinaryTree2.h"
 
 typedef BTData BSTData;
 
@@ -14,5 +14,8 @@ void BSTInsert(BTreeNode** pRoot, BSTData data);
 
 BTreeNode* BSTSearch(BTreeNode* bst, BSTData target);
 
+BTreeNode* BSTRemove(BTreeNode** pRoot, BSTData target);
+
+void BSTShowAll(BTreeNode* bst);
 
 #endif

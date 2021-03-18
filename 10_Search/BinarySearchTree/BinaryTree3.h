@@ -20,6 +20,14 @@ BTreeNode* GetRightSubTree(BTreeNode* bt); // return right address
 void MakeLeftSubTree(BTreeNode* main,BTreeNode* sub);
 void MakeRightSubTree(BTreeNode* main,BTreeNode* sub);
 
+// not using memory free
+void ChangeLeftSubTree(BTreeNode* main,BTreeNode* sub);
+void ChangeRightSubTree(BTreeNode* main, BTreeNode* sub);
+
+//delete child node and return child pointer (not memory free)
+BTreeNode* RemoveLeftSubTree(BTreeNode* bt);
+BTreeNode* RemoveRightSubTree(BTreeNode* bt);
+
 typedef void (*VisitFuncPtr)(BTData data);
 
 void PreorderTraverse(BTreeNode* bt,VisitFuncPtr action);

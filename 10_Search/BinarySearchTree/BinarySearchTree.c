@@ -1,5 +1,5 @@
 #include "BinarySearchTree.h"
-#include "BinaryTree2.h"
+#include "BinaryTree3.h"
 #include <stdio.h>
 
 void BSTMakeAndInit(BTreeNode** pRoot)
@@ -41,10 +41,23 @@ void BSTInsert(BTreeNode** pRoot, BSTData data)
 	}
 	else
 	{
-		*pRoot = nNode;
+		*pRoot = newNode;
 	}
 }
 BTreeNode* BSTSearch(BTreeNode* bst, BSTData target)
 {
+	BTreeNode* cNode = bst; // curent node
+	BSTData cd; // current data 
 
+	while(cNode != NULL)
+	{
+		cd = GetData(cNode);
+		if(target == cd)
+			return cNode;
+		else if(target < cd)
+			cNode = GetLeftSubTree(cNode);
+		else 
+			cNode = GetRightSubTree(cNode);
+	}
+	return NULL;
 }
