@@ -13,7 +13,7 @@ int SIsEmpty(Stack* pstack)
 	else
 		return FALSE;
 }
-
+ 
 void SPush(Stack* pstack,Data data)
 {
 	pstack->stackArr[++(pstack->topIndex)] = data;
