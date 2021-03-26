@@ -2,6 +2,9 @@
 #define __AL_GRAPH_KRUSKAL__
 
 #include "DLinkedList.h"
+#include "PriorityQueue.h"
+#include "ALEdge.h"
+
 
 enum {A,B,C,D,E,F,G,H,I,J}; // vertex name
 
@@ -11,18 +14,23 @@ typedef struct _ual
 	int numE;
 	List* adjList;
 	int* visitInfo; // for store searching vertex 
+	PQueue pqueue;
 } ALGraph;
 
 void GraphInit(ALGraph* pg,int nv);
 
 void GraphDestroy(ALGraph* pg);
 
-void AddEdge(ALGraph* pg,int fromV, int toV);
+void AddEdge(ALGraph* pg,int fromV, int toV, int weight);
 
 void ShowGraphEdgeInfo(ALGraph* pg);
 
 // vertex info printer based on DFS
 void DFShowGraphVertex(ALGraph* pg, int startV);
+
+void ConKruskalMST(ALGraph* pg); // implement MST
+
+void ShowGraphEdgeWeightInfo(ALGraph* pg);
 
 
 

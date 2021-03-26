@@ -7,7 +7,9 @@
 
 #define HEAP_LEN 100
 
-typedef char HData;
+#include "ALEdge.h"
+
+typedef Edge HData;
 /*
 ADT : 
 if the d1 priority higher than d2, return value more than 0
